@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp
+spec:
+  containers:
+  - name: myapp
+    image: nginx:1.14.2
+    ports:
+      - containerPort: 80
+  - name: new
+    image: busybox:latest
+    command: ["/bin/sh","-c","sleep 3600"]
